@@ -1,18 +1,23 @@
 import { useState } from "react";
 import { ProjectsList } from "./ProjectsList";
 import { Tabs } from "./Tabs";
+import { Contacts } from "./Contacts";
 
-export const Informations = ({ onClickSubject }) => {
+export const PortfolioSection = ({ onClickSubject }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const projects = [
     { name: "Motus", date: "2023-05-12" },
-    { name: "Scripts", date: "2023-05-12" },
-    { name: "Advent of Code", date: "2023-05-12" },
     { name: "Multi-Step Form", date: "2023-05-12" },
-    { name: "Motus", date: "2023-05-12" },
-    { name: "Motus", date: "2023-05-12" },
-    { name: "Motus", date: "2023-05-12" },
+    { name: "Example 1", date: "2023-05-12" },
+    { name: "Example 1", date: "2023-05-12" },
+    { name: "Example 1", date: "2023-05-12" },
+    { name: "Example 1", date: "2023-05-12" },
+    { name: "Example 1", date: "2023-05-12" },
+    { name: "Example 1", date: "2023-05-12" },
+    { name: "Example 1", date: "2023-05-12" },
+    { name: "Example 1", date: "2023-05-12" },
+    { name: "Example 1", date: "2023-05-12" },
   ];
 
   const tabs = [
@@ -26,7 +31,7 @@ export const Informations = ({ onClickSubject }) => {
       ),
     },
     { name: "Experiences" },
-    { name: "Contacts" },
+    { name: "Contacts", component: <Contacts /> },
   ];
 
 

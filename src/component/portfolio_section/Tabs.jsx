@@ -20,8 +20,8 @@ export const ItemTabs = ({ name, active, onClick }) => {
     <li
       onClick={onClick}
       className={
-        "text-lg font-bold py-3 px-6 cursor-pointer border-b-2 border-white " +
-        (active ? "border-indigo-400" : "hover:border-gray-200")
+        "text-lg font-bold py-3 px-6 cursor-pointer border-b-2  " +
+        (active ? "border-indigo-400" : "border-white hover:border-gray-200")
       }
     >
       {name}

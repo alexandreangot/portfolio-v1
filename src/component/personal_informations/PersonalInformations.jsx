@@ -1,4 +1,4 @@
-export const PersonnalInformations = () => {
+export const PersonalInformations = () => {
   return (
     <div className="w-3/4 flex flex-col space-y-8 bg-white rounded-xl p-10 shadow-2xl">
       <div className="w-11/12 text-end text-8xl flex flex-col space-y-5">

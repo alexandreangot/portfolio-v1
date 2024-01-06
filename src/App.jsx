@@ -1,14 +1,18 @@
 import { useState } from "react";
-import { Informations } from "./component/Informations";
+import { PortfolioSection } from "./component/portfolio_section/PortfolioSection";
 import { SubjectPopUp } from "./component/SubjectPopUp";
-import { PersonnalInformations } from "./component/PersonnalInformations";
+import { PersonalInformations } from "./component/personal_informations/PersonalInformations";
 
 export const App = () => {
+  const circleMarginTop = 20
+  const circleSize = 300
+
   let circlesStyle = [];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 1; i <= 30; i++) {
     const right = Math.floor(Math.random() * window.innerWidth) + 1;
-    const top = Math.floor(Math.random() * window.innerHeight) - 100;
-    const size = Math.floor(Math.random() * 250) + 20;
+    console.log(Math.floor(Math.random() * (window.innerHeight - circleSize - circleMarginTop)));
+    const top = Math.floor(Math.random() * (window.innerHeight - circleSize - circleMarginTop)) + circleMarginTop;
+    const size = Math.floor(Math.random() * circleSize/1);
     circlesStyle.push({
       right: right,
       top: top,
@@ -31,10 +35,10 @@ export const App = () => {
       })}
       <div className="flex w-full h-screen bg-white text-gray-900">
         <section className="w-1/2 flex flex-col justify-center items-center z-10">
-          <PersonnalInformations />
+          <PersonalInformations />
         </section>
         <section className="w-1/2 h-full flex justify-center items-center z-10">
-          <Informations onClickSubject={() => setDisplaySubject(true)} />
+          <PortfolioSection onClickSubject={() => setDisplaySubject(true)} />
         </section>
         {displaySubject && (
           <SubjectPopUp onClickClose={() => setDisplaySubject(false)}>
