@@ -1,13 +1,12 @@
 import { Carousel } from "flowbite-react";
-import { FaSymfony } from "react-icons/fa6";
-import { FaReact } from "react-icons/fa6";
-import { SiTailwindcss } from "react-icons/si";
+import { SiKotlin } from "react-icons/si";
+import { LanguageItem } from "../../../component/LanguageItem";
 
-export const Project1 = () => {
+export const Motus = () => {
   return (
     <div className="flex flex-col space-y-12 mx-12 my-5">
       <div className="flex flex-col space-y-5">
-        <h1 className="text-5xl font-bold">Project 1</h1>
+        <h1 className="text-5xl font-bold">Motus</h1>
         <p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
@@ -23,16 +22,8 @@ export const Project1 = () => {
         <h2 className="text-xl font-bold">Langages</h2>
         <ul className="flex space-x-3">
           <LanguageItem>
-            <FaSymfony />
-            <span>Symfony</span>
-          </LanguageItem>
-          <LanguageItem>
-            <FaReact />
-            <span>ReactJs</span>
-          </LanguageItem>
-          <LanguageItem>
-            <SiTailwindcss />
-            <span>Tailwind CSS</span>
+            <SiKotlin />
+            <span>Kotlin</span>
           </LanguageItem>
         </ul>
       </div>
@@ -95,10 +86,3 @@ export const Project1 = () => {
   );
 };
 
-const LanguageItem = ({ children }) => {
-  return (
-    <li className="flex items-center px-3 py-1 space-x-2 rounded-xl bg-gray-200 shadow-md">
-      {children}
-    </li>
-  );
-};

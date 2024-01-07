@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { PortfolioSection } from "./component/portfolio_section/PortfolioSection";
+import { PortfolioSection } from "./page/portfolio_section/PortfolioSection";
 import { SubjectPopUp } from "./component/SubjectPopUp";
-import { PersonalInformations } from "./component/personal_informations/PersonalInformations";
-import { Project1 } from "./component/portfolio_section/projects/Project1";
+import { PersonalInformations } from "./page/personal_informations/PersonalInformations";
 
 export const App = () => {
   const circleMarginTop = 20
@@ -22,7 +21,7 @@ export const App = () => {
     });
   }
 
-  const [displaySubject, setDisplaySubject] = useState(false);
+  const [displaySubject, setDisplaySubject] = useState();
 
   return (
     <>
@@ -39,11 +38,11 @@ export const App = () => {
           <PersonalInformations />
         </section>
         <section className="w-1/2 h-full flex justify-center items-center z-10">
-          <PortfolioSection onClickSubject={() => setDisplaySubject(true)} />
+          <PortfolioSection onClickSubject={setDisplaySubject} />
         </section>
         {displaySubject && (
-          <SubjectPopUp onClickClose={() => setDisplaySubject(false)}>
-            <Project1 />
+          <SubjectPopUp onClickClose={() => setDisplaySubject(null)}>
+            {displaySubject}
           </SubjectPopUp>
         )}
       </div>

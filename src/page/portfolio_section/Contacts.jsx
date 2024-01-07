@@ -26,7 +26,7 @@ export const Contacts = () => {
 const ItemContact = ({ children, link }) => {
   return (
     <li>
-      <a href={link} className="flex items-center space-x-5">
+      <a target="_blank" rel="noreferrer" href={link} className="flex items-center space-x-5">
         {children}
       </a>
     </li>
