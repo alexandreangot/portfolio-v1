@@ -23,7 +23,7 @@ export const ItemList = ({ name, date, onClick }) => {
   return (
     <li
       onClick={onClick}
-      className="flex justify-between space-x-20 p-8 cursor-pointer hover:shadow-inner"
+      className="flex justify-between space-x-20 p-8 cursor-pointer hover:bg-gray-100 hover:duration-500 hover:ease-in-out"
     >
       <span>{name}</span>
       <time className="text-lg" dateTime={date}>

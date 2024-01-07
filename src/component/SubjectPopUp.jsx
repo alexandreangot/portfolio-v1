@@ -10,7 +10,7 @@ export const SubjectPopUp = ({ children, onClickClose }) => {
         >
           <IoMdClose size={40} />
         </button>
-        {children}
+        <div className="h-full w-full overflow-y-scroll">{children}</div>
       </div>
     </section>
   );

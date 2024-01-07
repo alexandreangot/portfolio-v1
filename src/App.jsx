@@ -2,6 +2,7 @@ import { useState } from "react";
 import { PortfolioSection } from "./component/portfolio_section/PortfolioSection";
 import { SubjectPopUp } from "./component/SubjectPopUp";
 import { PersonalInformations } from "./component/personal_informations/PersonalInformations";
+import { Project1 } from "./component/portfolio_section/projects/Project1";
 
 export const App = () => {
   const circleMarginTop = 20
@@ -42,7 +43,7 @@ export const App = () => {
         </section>
         {displaySubject && (
           <SubjectPopUp onClickClose={() => setDisplaySubject(false)}>
-            <p>fjsqfsqdfljk</p>
+            <Project1 />
           </SubjectPopUp>
         )}
       </div>
